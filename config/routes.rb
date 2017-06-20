@@ -54,7 +54,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get "home/dashboard"
-  get "home/profile"
+  root "home#dashboard"
+  get "home/dashboard"=> "home#dashboard",   as: "home_dashboard"
+  get "home/profile"=> "home#profile", as: "home_profile"
 
 end
